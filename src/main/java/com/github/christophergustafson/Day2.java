@@ -99,7 +99,9 @@ public class Day2 {
                 }
                 prevLevel = currentLevel;
             }
-            if (safe) { return false; }
+            if (safe) {
+                return false;
+            }
         }
         return true;
     }

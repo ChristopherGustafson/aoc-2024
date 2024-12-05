@@ -1,16 +1,11 @@
 package com.github.christophergustafson;
 
 import static com.github.christophergustafson.Utils.readInputFile;
-import static java.lang.Math.abs;
 
-import java.security.PrivilegedExceptionAction;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
 
+@SuppressWarnings("Duplicates")
 public class DayX {
 
     public static void main(String[] args) {

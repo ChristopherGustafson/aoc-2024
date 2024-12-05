@@ -69,5 +69,4 @@ public class Day1 {
         return result.get();
     }
 
-
 }
