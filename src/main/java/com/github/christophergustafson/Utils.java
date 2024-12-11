@@ -42,4 +42,10 @@ public class Utils {
             .map(String::toCharArray)
             .toArray(char[][]::new);
     }
+
+    static int[][] parseInteger2DGrid(String input) {
+        return Arrays.stream(input.split("\n"))
+            .map(line -> line.chars().map(Character::getNumericValue).toArray())
+            .toArray(int[][]::new);
+    }
 }
