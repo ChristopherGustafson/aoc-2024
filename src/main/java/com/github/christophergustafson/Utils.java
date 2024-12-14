@@ -3,8 +3,11 @@ package com.github.christophergustafson;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Utils {
 
@@ -47,5 +50,29 @@ public class Utils {
         return Arrays.stream(input.split("\n"))
             .map(line -> line.chars().map(Character::getNumericValue).toArray())
             .toArray(int[][]::new);
+    }
+
+    static List<Long> findLongs(String stringToSearch) {
+        Pattern numberPattern = Pattern.compile("-?\\d+");
+        Matcher matcher = numberPattern.matcher(stringToSearch);
+
+        List<Long> longList = new ArrayList<>();
+        while (matcher.find()) {
+            longList.add(Long.parseLong(matcher.group()));
+        }
+
+        return longList;
+    }
+
+    static List<Integer> findIntegers(String stringToSearch) {
+        Pattern numberPattern = Pattern.compile("-?\\d+");
+        Matcher matcher = numberPattern.matcher(stringToSearch);
+
+        List<Integer> longList = new ArrayList<>();
+        while (matcher.find()) {
+            longList.add(Integer.parseInt(matcher.group()));
+        }
+
+        return longList;
     }
 }
