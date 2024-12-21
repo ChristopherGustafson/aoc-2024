@@ -1,9 +1,7 @@
 package com.github.christophergustafson;
 
-import static com.github.christophergustafson.Utils.parse2DGrid;
-import static com.github.christophergustafson.Utils.readInputFile;
-
-import java.util.Arrays;
+import static com.github.christophergustafson.utils.ParseUtils.parse2DGrid;
+import static com.github.christophergustafson.utils.ParseUtils.readInputFile;
 
 @SuppressWarnings("Duplicates")
 public class Day12 {

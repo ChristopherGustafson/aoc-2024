@@ -1,7 +1,7 @@
 package com.github.christophergustafson;
 
-import static com.github.christophergustafson.Utils.parseLinesOfIntegers;
-import static com.github.christophergustafson.Utils.readInputFile;
+import static com.github.christophergustafson.utils.ParseUtils.parseLinesOfIntegers;
+import static com.github.christophergustafson.utils.ParseUtils.readInputFile;
 
 import java.util.Arrays;
 import java.util.HashMap;

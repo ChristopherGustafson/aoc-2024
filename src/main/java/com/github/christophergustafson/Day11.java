@@ -1,14 +1,11 @@
 package com.github.christophergustafson;
 
-import static com.github.christophergustafson.Utils.readInputFile;
+import static com.github.christophergustafson.utils.ParseUtils.readInputFile;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicLong;
-import java.util.stream.Stream;
 
 @SuppressWarnings("Duplicates")
 public class Day11 {

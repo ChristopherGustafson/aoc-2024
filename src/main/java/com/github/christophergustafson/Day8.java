@@ -1,16 +1,12 @@
 package com.github.christophergustafson;
 
-import static com.github.christophergustafson.Utils.parse2DGrid;
-import static com.github.christophergustafson.Utils.readInputFile;
+import static com.github.christophergustafson.utils.ParseUtils.parse2DGrid;
+import static com.github.christophergustafson.utils.ParseUtils.readInputFile;
 
-import java.awt.Point;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 @SuppressWarnings("Duplicates")
 public class Day8 {

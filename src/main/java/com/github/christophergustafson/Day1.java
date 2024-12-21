@@ -1,6 +1,6 @@
 package com.github.christophergustafson;
 
-import static com.github.christophergustafson.Utils.readInputFile;
+import static com.github.christophergustafson.utils.ParseUtils.readInputFile;
 import static java.lang.Math.abs;
 
 import java.util.ArrayList;

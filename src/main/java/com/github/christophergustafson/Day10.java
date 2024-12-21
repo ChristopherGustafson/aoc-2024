@@ -1,7 +1,7 @@
 package com.github.christophergustafson;
 
-import static com.github.christophergustafson.Utils.parseInteger2DGrid;
-import static com.github.christophergustafson.Utils.readInputFile;
+import static com.github.christophergustafson.utils.ParseUtils.parseInteger2DGrid;
+import static com.github.christophergustafson.utils.ParseUtils.readInputFile;
 
 @SuppressWarnings("Duplicates")
 public class Day10 {

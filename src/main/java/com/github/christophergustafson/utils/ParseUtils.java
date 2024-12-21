@@ -1,4 +1,4 @@
-package com.github.christophergustafson;
+package com.github.christophergustafson.utils;
 
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Utils {
+public class ParseUtils {
 
-    static String readInputFile(String fileName) {
+    public static String readInputFile(String fileName) {
         try {
             return Files.readString(Path.of(ClassLoader.getSystemResource(fileName).toURI()), StandardCharsets.UTF_8);
         } catch (Exception e) {
@@ -20,7 +20,7 @@ public class Utils {
         }
     }
 
-    static List<List<Integer>> parseLinesOfIntegers(String input) {
+    public static List<List<Integer>> parseLinesOfIntegers(String input) {
         return Arrays.stream(input.split("\n"))
             .map(line -> Arrays.stream(line.split(" "))
                 .map(Integer::parseInt)
@@ -28,7 +28,7 @@ public class Utils {
             .toList();
     }
 
-    static int[][] parseLinesOfIntegers(String input, String divider) {
+    public static int[][] parseLinesOfIntegers(String input, String divider) {
         return Arrays.stream(input.split("\n"))
             .map(line -> Arrays.stream(line.split(divider))
                 .mapToInt(Integer::parseInt)
@@ -36,23 +36,23 @@ public class Utils {
             .toArray(int[][]::new);
     }
 
-    static List<String> parseLinesOfStrings(String input) {
+    public static List<String> parseLinesOfStrings(String input) {
         return Arrays.stream(input.split("\n")).toList();
     }
 
-    static char[][] parse2DGrid(String input) {
+    public static char[][] parse2DGrid(String input) {
         return Arrays.stream(input.split("\n"))
             .map(String::toCharArray)
             .toArray(char[][]::new);
     }
 
-    static int[][] parseInteger2DGrid(String input) {
+    public static int[][] parseInteger2DGrid(String input) {
         return Arrays.stream(input.split("\n"))
             .map(line -> line.chars().map(Character::getNumericValue).toArray())
             .toArray(int[][]::new);
     }
 
-    static List<Long> findLongs(String stringToSearch) {
+    public static List<Long> findLongs(String stringToSearch) {
         Pattern numberPattern = Pattern.compile("-?\\d+");
         Matcher matcher = numberPattern.matcher(stringToSearch);
 
@@ -64,7 +64,7 @@ public class Utils {
         return longList;
     }
 
-    static List<Integer> findIntegers(String stringToSearch) {
+    public static List<Integer> findIntegers(String stringToSearch) {
         Pattern numberPattern = Pattern.compile("-?\\d+");
         Matcher matcher = numberPattern.matcher(stringToSearch);
 
@@ -74,5 +74,14 @@ public class Utils {
         }
 
         return longList;
+    }
+
+    public static void printGrid(char[][] grid) {
+        for (char[] row : grid) {
+            for (char cell : row) {
+                System.out.print(cell);
+            }
+            System.out.println();
+        }
     }
 }

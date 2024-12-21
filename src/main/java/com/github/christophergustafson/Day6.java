@@ -1,7 +1,9 @@
 package com.github.christophergustafson;
 
-import static com.github.christophergustafson.Utils.parse2DGrid;
-import static com.github.christophergustafson.Utils.readInputFile;
+import static com.github.christophergustafson.utils.ParseUtils.parse2DGrid;
+import static com.github.christophergustafson.utils.ParseUtils.readInputFile;
+
+import com.github.christophergustafson.utils.grid.Direction;
 
 @SuppressWarnings("Duplicates")
 public class Day6 {
@@ -86,13 +88,6 @@ public class Day6 {
         } catch (ArrayIndexOutOfBoundsException ignored) { }
 
         return visitedCount;
-    }
-
-    enum Direction {
-        NORTH,
-        SOUTH,
-        WEST,
-        EAST,
     }
 
     private static Position getStartingPosition(char[][] grid) {
