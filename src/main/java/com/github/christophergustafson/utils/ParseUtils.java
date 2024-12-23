@@ -1,5 +1,6 @@
 package com.github.christophergustafson.utils;
 
+import com.github.christophergustafson.utils.grid.Grid;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -44,6 +45,13 @@ public class ParseUtils {
         return Arrays.stream(input.split("\n"))
             .map(String::toCharArray)
             .toArray(char[][]::new);
+    }
+
+    public static Grid parseGrid(String input) {
+        char[][] grid = Arrays.stream(input.split("\n"))
+            .map(String::toCharArray)
+            .toArray(char[][]::new);
+        return new Grid(grid);
     }
 
     public static int[][] parseInteger2DGrid(String input) {
